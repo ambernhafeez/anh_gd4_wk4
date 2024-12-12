@@ -6,11 +6,13 @@ public class ItemSpawnManager : MonoBehaviour
     Vector3 spawnPosition;
 
     private float leftBound = -10;
+    private PlayerController playerControllerScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        InvokeRepeating("SpawnItems", 1, Random.Range(0.5f,2.0f));
+        InvokeRepeating("SpawnItems", 1, Random.Range(0.9f,2.0f));
+        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -24,8 +26,12 @@ public class ItemSpawnManager : MonoBehaviour
 
     void SpawnItems()
     {
-        spawnPosition = new Vector3(transform.position.x, Random.Range(0.0f, 4.5f), 0);
-        int obstacleIndex = Random.Range(0, obstaclePrefabs.Length);
-        Instantiate(obstaclePrefabs[obstacleIndex], spawnPosition, Quaternion.Euler(-100,0,0));
+        if (playerControllerScript.gameOver == false)
+        {
+            spawnPosition = new Vector3(transform.position.x, Random.Range(0.0f, 4.5f), 0);
+            int obstacleIndex = Random.Range(0, obstaclePrefabs.Length);
+            Instantiate(obstaclePrefabs[obstacleIndex], spawnPosition, Quaternion.Euler(-100,0,0));
+        }
+        
     } 
 }
