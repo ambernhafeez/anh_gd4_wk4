@@ -172,6 +172,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: rat-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631a1055f6cc1354a9b0f5f40dc84601
+      internalID: -1497723765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -188,6 +210,7 @@ TextureImporter:
     nameFileIdTable:
       rat-Sheet_0: 1474141966
       rat-Sheet_1: -1034567566
+      rat-Sheet_2: -1497723765
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
